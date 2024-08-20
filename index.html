@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FranMN">
+    <meta name="keywords" lang="es" content=" etiquetas, html, páginas, video, audio, formulario, img">
+    <meta name="description" lang="es" content="lista de etiquetas básicas">
+    <title>Estructura General</title>
+</head>
+<body>
+    <header>
+        <h1 id="Inicio">Bienvenidos a nuestra página</h1>
+        <h3>estructura general</h3>
+        <a href="#inicio"><img src="img/logo.png" width="150" height="150" alt="logotipo">
+        </a>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+    <!--Sección principal del contenido-->
+    <main>
+        <section id="Acerca">
+            <h2>Acerca de</h2>
+            <p>En esta sección puedes leer sobre quien soy y qué hago</p>
+            <img src="img/background-with-white-walls-plant.jpg" width="300" height="200" alt="planta"><br>
+            <p>Video relacionado</p><br>
+            <video width="500" height="400" controls src="media/SilenceTrailer.mp4"></video><br>
+            <a href="#inicio">Volver a Inicio</a>
+        </section>
+        <section id="servicio">
+            <h2>Servicios</h2>
+            <p>Ofrezco una variedad de servicios para ayudar a tu negocio a crecer</p>
+            <img src="img/OIP1.jpg" width="600" height="400" alt="agua"><br>
+            <h3>Escucha este audio</h3><br>
+            <audio controls src="media/tuamigofiel.mp3" type="mp3"></audio>
+            <a href="#servicio">Volver a Inicio</a>
+        </section>
+        <section id="contacto">
+            <h2>Servicios</h2>
+            <p>Ponte en contacto por medio de este formulario</p>
+            <div class="contenedor">
+                <h2>Formulario de contacto</h2>
+                <form action="/Enviar formulario" method="post"><!--Para el backend-->
+                <!--nombre-->
+                <div class="formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50" placeholder="Ingrese su nombre"><br>
+                </div><br>
+                <!--correo electronico-->
+                <div class="formulario">
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" name="email" required placeholder="tuusuario@ejemplo.com">
+                </div><br>
+                <!--teléfono-->
+                <div class="formulario">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="506-4454-6523">
+                </div><br>
+                <!--Asuntos-->
+                <div class="formulario">
+                    <label for="Asunto">Asunto:</label>
+                    <input type="text" id="text" name="asunto" required minlength="5" maxlength="100" placeholder="Motivo de su mensaje">
+                </div><br>
+                 <!--Mensaje-->
+                 <div class="formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="500" placeholder="escriba aquí su mensaje"></textarea>
+                </div><br>
+                <!--Enviar-->
+                <input type="submit" value="Enviar">
+                </form>
+            </div><br>
+            <a href="#servicio">Volver a Inicio</a>
+        </section>
+    </main>
+    <!--barra lateral con informacion adicional-->
+    <aside>
+        <h3>Noticias recientes</h3>
+        <p>Ultimas actualizaciones sobre mis servicios y proyectos</p>
+        <img src="img/file.jpg" width="250" height="150" alt="paisaje">
+    </aside><br>
+    <hr>
+    <!--Pie de página-->
+    <footer>
+        <p>&copy; 2024 Mi pagina web. todos los derechos reservados</p>
+        <p><a href="http://wwww.ina.ac.cr">Visitar nuestra web</a></p><br>
+    </footer>
+</body>
+</html>
